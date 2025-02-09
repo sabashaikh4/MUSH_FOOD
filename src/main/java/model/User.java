@@ -7,8 +7,10 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String fullName;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -16,8 +18,8 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private String role = "USER"; // Default role
+    //@Column(nullable = false)
+    private String USER_ROLE role; //= "USER"; // Default role
 
     // Getters and Setters
     public Long getId() {
@@ -37,6 +39,6 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
+//    public String getRole() { return role; }
+//    public void setRole(String role) { this.role = role; }
 }
