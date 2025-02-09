@@ -1,6 +1,6 @@
-package repository;
+package com.MyCafe.repository;
 
-import model.User;
+import com.MyCafe.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

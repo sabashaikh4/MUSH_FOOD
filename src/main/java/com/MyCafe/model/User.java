@@ -1,7 +1,10 @@
-package model;
+package com.MyCafe.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -19,7 +22,17 @@ public class User {
     private String password;
 
     //@Column(nullable = false)
-    private String USER_ROLE role; //= "USER"; // Default role
+   //= "USER"; // Default role
+ private USER_ROLE role;
+
+
+
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
+    private List<Order> orders = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Address> addresses = new ArrayList<>();
 
     // Getters and Setters
     public Long getId() {
@@ -39,6 +52,6 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-//    public String getRole() { return role; }
-//    public void setRole(String role) { this.role = role; }
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
 }

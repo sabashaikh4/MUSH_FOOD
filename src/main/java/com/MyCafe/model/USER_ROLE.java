@@ -1,4 +1,4 @@
-package model;
+package com.MyCafe.model;
 
 public enum USER_ROLE {
 
