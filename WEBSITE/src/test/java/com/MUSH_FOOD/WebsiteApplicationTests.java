@@ -1,4 +1,4 @@
-package com.MUSH_FOOD.WEBSITE;
+package com.MUSH_FOOD;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

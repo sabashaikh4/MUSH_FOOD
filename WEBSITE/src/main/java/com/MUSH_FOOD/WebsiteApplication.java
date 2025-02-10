@@ -1,4 +1,4 @@
-package com.MUSH_FOOD.WEBSITE;
+package com.MUSH_FOOD;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

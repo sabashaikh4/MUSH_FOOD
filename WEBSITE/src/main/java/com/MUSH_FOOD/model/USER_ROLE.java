@@ -1,4 +1,4 @@
-package com.MUSH_FOOD.WEBSITE.model;
+package com.MUSH_FOOD.model;
 
 
 

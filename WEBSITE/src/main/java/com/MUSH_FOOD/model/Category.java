@@ -1,21 +1,30 @@
-package com.MUSH_FOOD.WEBSITE.model;
-
+package com.MUSH_FOOD.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
-
-@Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
+public class Category {
 
-public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+//    private String name;
+//
+//    private String description;
+//
+//    private Long price;
+//
+//    private Category foo
+
 }
