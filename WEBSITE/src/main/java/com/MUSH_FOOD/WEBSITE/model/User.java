@@ -1,8 +1,9 @@
-package com.MyCafe.model;
+package com.MUSH_FOOD.WEBSITE.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +23,8 @@ public class User {
     private String password;
 
     //@Column(nullable = false)
-   //= "USER"; // Default role
- private USER_ROLE role;
+    //= "USER"; // Default role
+    private USER_ROLE role;
 
 
 
@@ -52,6 +53,6 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
+    public USER_ROLE getRole() { return role; }
+    public void setRole(String role) { this.role = USER_ROLE.valueOf(role); }
 }

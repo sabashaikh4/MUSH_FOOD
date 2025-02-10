@@ -1,4 +1,6 @@
-package com.MyCafe.model;
+package com.MUSH_FOOD.WEBSITE.model;
+
+
 
 public enum USER_ROLE {
 
